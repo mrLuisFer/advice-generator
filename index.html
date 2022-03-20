@@ -18,10 +18,28 @@
         <header class="card-header">
           <p>Advice <span class="advice-number" id="advice-number">#0</span></p>
         </header>
-        <h1 class="card-content" id="advice-content">Advice content</h1>
+        <h1 class="card-content" id="advice-content"></h1>
+        <div id="loader">
+          <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
         <section>
-          <div class="line"></div>
-          <div class="line"></div>
+          <div class="divider">
+            <img
+              src="./pattern-divider-mobile.svg"
+              alt="Mobile Divider"
+              class="divider-mobile"
+            />
+            <img
+              src="./pattern-divider-desktop.svg"
+              alt="Desktop Divider"
+              class="divider-desktop"
+            />
+          </div>
           <button class="card-icon" id="advice-icon">
             <img src="./icon-dice.svg" alt="Icon Dice" />
           </button>
