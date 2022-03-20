@@ -1,18 +1,28 @@
-const url = "https://api.adviceslip.com/advice"
 
 const adviceNumber = document.querySelector("#advice-number")
-const adviceIcon = document.querySelector("#advice-icon")
 const adviceContent = document.querySelector("#advice-content")
+const loaderDiv = document.querySelector("#loader")
 
+let loader = true
 const getRandomAdvice = async () => {
-  const res = await fetch(url)
-  const data = await res.json()
-  const advice = data.slip
-  adviceNumber.textContent = `#${advice.id}`
-  adviceContent.textContent = `"${advice.advice}"`
+  loader = true
+  const url = "https://api.adviceslip.com/advice"
+  try {
+    const res = await fetch(url)
+    const data = await res.json()
+    const advice = data.slip
+    if (data) loader = false
+    if (!loader) {
+      loaderDiv.textContent = ""
+      loaderDiv.style.display = "none"
+      adviceContent.textContent = `"${advice.advice}"`
+      adviceNumber.textContent = `#${advice.id}`
+    } else {
+      loaderDiv.style.display = "block"
+      adviceContent.style.display = "none"
+      adviceNumber.style.display = "none"
+    }
+  } catch (err) { console.error(err) }
 }
 
-window.addEventListener('load', () => getRandomAdvice())
-
-adviceIcon.addEventListener('click', async () => getRandomAdvice())
-
+export default getRandomAdvice
