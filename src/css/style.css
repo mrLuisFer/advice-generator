@@ -1,0 +1,85 @@
+:root {
+  --text-font: "Manrope", sans-serif;
+  font-size: 28px;
+  --mobile: 375px;
+  --desktop: 1440px;
+  /* Primary */
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  /* Neutral */
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: inherit;
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--dark-blue);
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  color: var(--light-cyan);
+  background: var(--dark-grayish-blue);
+  width: 365px;
+  border-radius: 14px;
+  text-align: center;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.card-header {
+  color: var(--neon-green);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.card-icon {
+  position: absolute;
+  background: var(--neon-green);
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  bottom: -1rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  user-select: none;
+  border: none;
+  outline: var(--light-cyan);
+}
+
+.card-content {
+  font-size: 0.7rem;
+  padding-bottom: 2rem;
+  font-weight: 800;
+}
+
+.card-icon:focus-visible {
+  box-shadow: 0px 0px 30px 1px var(--neon-green);
+}
+
+.card-icon:hover {
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 30px 1px var(--neon-green);
+}
