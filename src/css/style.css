@@ -30,7 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .card {
@@ -105,5 +105,14 @@ body {
   .card-content {
     font-size: 1rem;
     font-weight: 800;
+  }
+
+  .divider-mobile {
+    display: none;
+  }
+
+  .divider-desktop {
+    display: block;
+    margin: 0 auto;
   }
 }
