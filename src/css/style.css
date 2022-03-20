@@ -36,8 +36,8 @@ body {
 .card {
   color: var(--light-cyan);
   background: var(--dark-grayish-blue);
-  width: 365px;
-  border-radius: 14px;
+  /* width: 365px; */
+  border-radius: 10px;
   text-align: center;
   position: relative;
   padding: 0.5rem;
@@ -71,7 +71,6 @@ body {
 
 .card-content {
   font-size: 0.7rem;
-  padding-bottom: 2rem;
   font-weight: 800;
 }
 
@@ -82,4 +81,29 @@ body {
 .card-icon:hover {
   transition: 0.3s ease;
   box-shadow: 0px 0px 30px 1px var(--neon-green);
+}
+
+.divider {
+  padding-bottom: 2rem;
+}
+
+.divider-desktop {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    max-width: 600px;
+  }
+
+  .card-content {
+    font-size: 1rem;
+    font-weight: 800;
+  }
 }
