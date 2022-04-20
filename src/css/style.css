@@ -84,6 +84,7 @@ body {
 }
 
 .divider {
+  user-select: none;
   padding-bottom: 2rem;
 }
 
